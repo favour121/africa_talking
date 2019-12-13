@@ -1,3 +1,3 @@
-module Infobeep
+module AfricaTalking
   VERSION = "0.1.3"
 end

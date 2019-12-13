@@ -1,19 +1,19 @@
 require 'json'
 
-module Infobeep
+module AfricaTalking
   class BaseRequestModel < Model
 
     def payload
       if http_method == :get
         nil
       else
-        hash_attributes.to_json
+        body_attributes.to_json
       end
     end
 
     def headers
       if http_method == :get
-        {params: hash_attributes}
+        {params: payload}
       else
         {}
       end
