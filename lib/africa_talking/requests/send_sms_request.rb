@@ -2,7 +2,6 @@ require 'json'
 
 module AfricaTalking
   class SendSMSRequest < BaseRequestModel
-    attribute :username, String
     attribute :to, Array[String]
     attribute :from, String
     attribute :message, String
