@@ -50,7 +50,7 @@ module AfricaTalking
           'User-Agent': "favour121/AfricaTalking-#{AfricaTalking::VERSION}",
           'Content-Type': 'application/x-www-form-urlencoded',
           'accept': 'application/json',
-          apiKey: @apiKey
+          'apiKey': @apiKey
       }
       hsh
     end
