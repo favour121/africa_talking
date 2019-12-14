@@ -7,7 +7,7 @@ module AfricaTalking
       if http_method == :get
         nil
       else
-        body_attributes.to_json
+        body_attributes
       end
     end
 

@@ -33,7 +33,7 @@ module AfricaTalking
       headers[:params] = params if params
 
       begin
-        response = RestClient::Request.execute(method: method, url: url, payload: payload, headers: headers)
+        response = RestClient::Request.execute(method: method, url: url, payload: payload.to_json, headers: headers)
       rescue RestClient::ExceptionWithResponse => err
         raise err
       end
