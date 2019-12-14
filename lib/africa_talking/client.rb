@@ -8,7 +8,7 @@ module AfricaTalking
     API_BASE_URL_SANDBOX = 'https://api.sandbox.africastalking.com/version1/'
     API_BASE_URL = 'https://api.africastalking.com/version1/'
 
-    def initialize(username, apiKey, sandbox_mode = true)
+    def initialize(username, apiKey, sandbox_mode = false)
       @username = username
       @apiKey = apiKey
       @sandbox_mode = sandbox_mode
