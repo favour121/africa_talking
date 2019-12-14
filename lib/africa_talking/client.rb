@@ -25,6 +25,7 @@ module AfricaTalking
         url = API_BASE_URL + sms_request.route
       end
       method = sms_request.http_method
+      payload = {}
       headers = client_headers.merge(sms_request.headers)
 
       headers = headers.merge(params: client_payload) if sms_request.http_method == :get
