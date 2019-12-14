@@ -48,7 +48,7 @@ module AfricaTalking
     def client_headers
       hsh = {
           'User-Agent': "favour121/AfricaTalking-#{AfricaTalking::VERSION}",
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/x-www-form-urlencoded',
           'accept': 'application/json',
           apiKey: @apiKey
 
