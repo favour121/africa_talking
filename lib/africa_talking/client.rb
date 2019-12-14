@@ -37,15 +37,8 @@ module AfricaTalking
         raise err
       end
 
-      #response_hash = JSON.parse(response.body)
-      #sms_request.response_class.new(response_hash)
-
-
       response_hash = JSON.parse(response.body)
-      puts response.body.class
-      puts response_hash.class
-      puts "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
-      sms_request.response_class.new(response.body)
+      sms_request.response_class.new(response_hash)
     end
 
     def client_payload
