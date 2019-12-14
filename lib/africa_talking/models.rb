@@ -24,7 +24,7 @@ module AfricaTalking
   end
 
   class SendSMSResponse < Model
-    attribute :SMSMessageData, Array[SMSResponseDetail]
+    attribute :SMSMessageData, SMSResponseDetail
   end
 
   class SMSDeliveryCallbackNotification < Model
