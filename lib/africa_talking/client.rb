@@ -26,7 +26,10 @@ module AfricaTalking
       end
       method = sms_request.http_method
       headers = client_headers.merge(sms_request.headers)
+
+      headers = headers.merge(params: client_payload) if sms_request.http_method == :get
       payload = client_payload.merge(sms_request.payload) if method != :get
+
       headers[:params] = params if params
 
       begin
@@ -51,7 +54,6 @@ module AfricaTalking
           apiKey: @apiKey
 
       }
-      hsh.merge!(params: client_payload) if message_request.http_method == :get
       hsh
     end
 
