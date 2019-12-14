@@ -30,8 +30,6 @@ module AfricaTalking
       headers = headers.merge(params: client_payload) if sms_request.http_method == :get
       payload = client_payload.merge(sms_request.payload) if method != :get
 
-      headers[:params] = params if params
-
       begin
         response = RestClient::Request.execute(method: method, url: url, payload: payload.to_json, headers: headers)
       rescue RestClient::ExceptionWithResponse => err
