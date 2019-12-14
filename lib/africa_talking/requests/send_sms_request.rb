@@ -9,7 +9,7 @@ module AfricaTalking
     attribute :enqueue, Integer, default: 1
     attribute :keyword, String
     attribute :linkId, String
-    attribute :retryDurationInHours, Integer
+    attribute :retryDurationInHours, Integer, default: 48
 
 
     def body_attributes
