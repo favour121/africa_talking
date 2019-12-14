@@ -32,7 +32,7 @@ module AfricaTalking
       payload = client_payload.merge(sms_request.payload) if method != :get
 
       begin
-        response = RestClient::Request.execute(method: method, url: url, payload: payload.to_json, headers: headers)
+        response = RestClient::Request.execute(method: method, url: url, payload: payload, headers: headers)
       rescue RestClient::ExceptionWithResponse => err
         raise err
       end
