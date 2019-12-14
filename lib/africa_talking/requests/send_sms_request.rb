@@ -5,7 +5,7 @@ module AfricaTalking
     attribute :to, Array[String]
     attribute :from, String
     attribute :message, String
-    attribute :bulkSMSMode, Integer
+    attribute :bulkSMSMode, Integer, default: 1
     attribute :enqueue, Integer, default: 1
     attribute :keyword, String
     attribute :linkId, String
