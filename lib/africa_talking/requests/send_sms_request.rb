@@ -3,7 +3,7 @@ require 'json'
 module AfricaTalking
   class SendSMSRequest < BaseRequestModel
     attribute :to, Array[String]
-    # attribute :from, String, default: 'AFRICASTKNG'
+    attribute :from, String, default: 'AFRICASTKNG'
     attribute :message, String
     attribute :bulkSMSMode, Integer, default: 1
     attribute :enqueue, Integer, default: 1
